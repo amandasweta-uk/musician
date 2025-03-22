@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Kalnia+Glaze:wght@100..700&family=Playwrite+BE+WAL:wght@100..400&family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>Amanda Sweta | Funeral Music</title>
+    <style>
+        
+        /* 📌 1️⃣ Make Header Text Fit on Small Screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px; /* Smaller title for mobile */
+    }
+    header p {
+        font-size: 14px; /* Reduce text size */
+        line-height: 1.4; /* Add spacing */
+    }
+}
+
+/* 📌 2️⃣ Make Image Fully Responsive */
+.image-container img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* 📌 3️⃣ Adjust Modal for Mobile */
+@media (max-width: 500px) {
+    .modal {
+        width: 90%; /* Takes more screen space on mobile */
+        padding: 20px;
+        max-height: 90vh; /* Prevents modal from being too tall */
+        overflow-y: auto; /* Enables scrolling if content is too long */
+    }
+}
+
+/* 📌 4️⃣ Make Service Boxes More Mobile-Friendly */
+@media (max-width: 400px) {
+    .service {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px; /* Slightly smaller padding */
+    }
+}
+
+/* 📌 5️⃣ Improve Form Layout for Mobile */
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+    }
+    input, textarea, select {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+/* 📌 6️⃣ Prevent Footer Text From Wrapping Weirdly */
+@media (max-width: 500px) {
+    footer {
+        font-size: 14px;
+        padding: 20px;
+    }
+    footer p {
+        line-height: 1.5;
+    }
+}
+
+        /* Olivia Rodrigo Store-Inspired Styling */
+ /* Root Colors */
+:root {
+    --velvet-purple: #2b1331;
+    --misty-lilac: #7a5c85;
+    --rosy-blush: #e1b7d3;
+    --moonlight-gray: #d8d8d8;
+    --creamy-pearl: #f5f0f6;
+}
+
+/* Adding Soft Grainy Texture */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg1.png'); /* Soft grain effect */
+    opacity: 0.07; /* Just enough to give a dreamy luxury feel */
+    z-index: -1;
+}
+h1{
+            font-size : 28px;
+        color: #2b1331;
+        }
+        p{
+            color: #000;
+        }
+/* General Styles */
+body {
+    font-family: "Courier Prime", monospace;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background: var(--velvet-purple);
+    color: var(--creamy-pearl);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: var(--misty-lilac);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: var(--creamy-pearl);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for boldness */
+    position: relative;
+}
+
+
+/* Soft Light Overlay for Glow */
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 80%);
+    z-index: 1;
+}
+
+/* Image Styling */
+.image-container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(225, 183, 211, 0.5); /* Rosy glow */
+}
+
+/* Services */
+.service {
+    background: var(--misty-lilac);
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    border-left: 6px solid var(--rosy-blush);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: var(--creamy-pearl);
+    letter-spacing: 1px;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, var(--misty-lilac) 20%, var(--velvet-purple) 100%);
+}
+
+/* Glow Effect on Hover */
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px var(--rosy-blush);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    background-color: #7a5c85;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: var(--creamy-pearl);
+    padding: 30px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    z-index: 1000;
+    color: var(--velvet-purple);
+    font-weight: bold;
+}
+
+/* Buttons */
+.modal button, form button {
+    background: var(--rosy-blush);
+    color: var(--velvet-purple);
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 17px;
+    border-radius: 8px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+/* Hover Glow */
+.modal button:hover, form button:hover {
+    background-color: #7a5c85;
+    color: var(--creamy-pearl);
+    box-shadow: 0px 4px 10px var(--rosy-blush);
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 900;
+}
+
+/* Form */
+form {
+    width: 80%;
+    max-width: 420px;
+    margin: 20px auto;
+}
+
+input, textarea, select {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 12px;
+    border: 2px solid var(--rosy-blush);
+    border-radius: 6px;
+    font-size: 13px;
+    background: var(--creamy-pearl);
+    color: var(--velvet-purple);
+}
+
+/* Footer */
+footer {
+    background: var(--misty-lilac);
+    padding: 25px;
+    margin-top: 25px;
+    font-size: 13px;
+    color: var(--creamy-pearl);
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: var(--rosy-blush);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>amanda sweta</h1>
+        <p>professional funeral musician - providing comfort through music</p>
+    </header>
+
+    <!-- Image -->
+    <div class="image-container">
+        <img src="me.jpeg" alt="Piano with Rose">
+    </div>
+
+   <br><br>
+    <section id="services">
+    
+<h2>Packages & Pricing</h2>
+
+<div class="service" onclick="openModal('Standard', 'A warm and simple tribute with live singing and keyboard played in an organ style for a classic, comforting feel.', 'setup-basic.jpg', '£150')">
+    <h3>Standard - £150</h3>
+    <p>🎹 Keyboard + 🎤 Live Singing</p>
+</div>
+
+<div class="service" onclick="openModal('Enhanced', 'A fuller sound with live guitar and keyboard featuring soft string backing, along with heartfelt live singing.', 'setup-enhanced.jpg', '£250')">
+    <h3>Enhanced - £250</h3>
+    <p>🎸 Live Guitar + 🎹 Keyboard + 🎤 Live Singing</p>
+</div>
+
+<div class="service" onclick="openModal('Premium', 'A deeply moving tribute with live guitar, singing, and keyboard enriched with soft strings and gentle harp fills for a soothing atmosphere. Includes prelude and postlude music.', 'setup-premium.jpg', '£325')">
+    <h3>Premium - £325</h3>
+    <p>🎸 Guitar + 🎹 Keyboard + 🎤 Live Singing + Prelude and Postlude Music</p>
+</div>
+
+<div class="service" onclick="openModal('Ultimate', 'The most special send-off with live guitar, emotional singing, and keyboard featuring rich strings, harp fills, and added vocal harmonies for extra depth.', 'setup-ultimate.jpg', '£500')">
+    <h3>Ultimate - £500</h3>
+    <p>🎸 Guitar + 🎹 Keyboard + 🎤 Live Singing + 🎧 Vocal Harmonies</p>
+</div>
+
+
+    </section>
+
+    <div class="overlay" onclick="closeModal()"></div>
+    
+    <div id="package-modal" class="modal">
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Setup Image">
+        <p id="modal-description"></p>
+        <button onclick="selectPackage()">Select This Package</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <section id="contact">
+        <h2>Book Now</h2>
+        <form id="contact-form" action="https://formspree.io/f/mqapqaek" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <select name="package" required>
+        <option value="">Select a Package</option>
+         <option value="0">Inquiry</option>
+        <option value="Basic - £150">Basic - £150</option>
+        <option value="Enhanced - £250">Enhanced - £250</option>
+        <option value="Premium - £325">Premium - £325</option>
+        <option value="Ultimate - £500">Ultimate - £500</option>
+    </select>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<p id="form-message"></p>
+
+    </section>
+
+    <footer>
+        <p>📩: <a href="mailto:amandasweta@gmail.com">amandasweta@gmail.com</a> | 📞: <a href="tel:+447424305344">07424 305344</a></p>
+        <p>&copy; 2025 amanda sweta. all rights reserved.</p>
+    </footer>
+
+    <script>
+        function openModal(title, description, image, price) {
+            document.getElementById("modal-title").innerText = title + " - " + price;
+            document.getElementById("modal-description").innerText = description;
+            document.getElementById("modal-image").src = image;
+            document.querySelector(".modal").style.display = "block";
+            document.querySelector(".overlay").style.display = "block";
+        }
+
+        function closeModal() {
+            document.querySelector(".modal").style.display = "none";
+            document.querySelector(".overlay").style.display = "none";
+        }
+
+        function selectPackage() {
+    let selectedPackage = document.getElementById("modal-title").innerText.split(" - ")[0]; // Get package name only
+    let packageDropdown = document.querySelector("select[name='package']"); // Find the select element
+
+    for (let option of packageDropdown.options) {
+        if (option.value.startsWith(selectedPackage)) { // Match package name
+            packageDropdown.value = option.value;
+            break;
+        }
+    }
+
+    closeModal(); // Close modal after selection
+}
+
+    </script>
+
+</body>
+</html>
